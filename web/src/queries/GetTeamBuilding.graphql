@@ -1,0 +1,78 @@
+query GetTeamBuilding($locale: I18NLocaleCode!, $slug: String!) {
+  teamBuildings(locale: $locale, filters: { slug: { eq: $slug } }) {
+    title
+    meta_title
+    meta_description
+    duration
+    localization
+    accessible
+    language
+    slug
+    cover {
+      url
+      width
+      height
+      alternativeText
+    }
+
+    benefitsTitle
+    benefits {
+      benefit
+    }
+    content {
+      __typename
+      ... on ComponentContentText {
+        id
+        text
+      }
+      ... on ComponentContentImage {
+        id
+        picture {
+          url
+          width
+          height
+          alternativeText
+        }
+      }
+      ... on ComponentContentGallery {
+        id
+        media {
+          url
+          width
+          height
+          alternativeText
+        }
+      }
+      ... on ComponentContentQuote {
+        quote: text
+        author
+      }
+      ... on ComponentContentChecklist {
+        title
+        items {
+          text
+        }
+      }
+      ... on ComponentContentFaqs {
+        items {
+          question
+          answer
+        }
+      }
+    }
+  }
+
+  others: teamBuildings(
+    locale: $locale
+    pagination: { page: 1, pageSize: 15 }
+  ) {
+    title
+    slug
+    cover {
+      url
+      width
+      height
+      alternativeText
+    }
+  }
+}

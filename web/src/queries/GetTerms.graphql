@@ -1,0 +1,7 @@
+query GetTerms($locale: I18NLocaleCode!) {
+  termsConditionsPage(locale: $locale) {
+    description
+    meta_title
+    meta_description
+  }
+}

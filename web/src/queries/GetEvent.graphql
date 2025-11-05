@@ -1,0 +1,15 @@
+query GetEvent($locale: I18NLocaleCode!, $slug: String!) {
+  events(locale: $locale, filters: { slug: { eq: $slug } }) {
+    title
+    description
+    slug
+    cover {
+      name
+      url
+    }
+    gallery {
+      name
+      url
+    }
+  }
+}

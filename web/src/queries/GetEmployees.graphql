@@ -1,0 +1,351 @@
+query GetEmployees($locale: I18NLocaleCode!) {
+  employees(locale: $locale) {
+    name
+    description
+    role
+    slug
+    photo {
+      url
+      width
+      height
+      alternativeText
+    }
+  }
+  teamPage(locale: $locale) {
+    title
+    meta_title
+    meta_description
+    precontent {
+      __typename
+      ... on ComponentBlocksHero {
+        pretitle
+        title
+        description
+        tag
+      }
+      ... on ComponentBlocksHeroVideo {
+        title
+        url
+        background {
+          url
+          width
+          height
+          alternativeText
+        }
+      }
+      ... on ComponentBlocksCallToAction {
+        title
+        url
+        callToAction
+        callToActionBackground: background {
+          url
+          width
+          height
+          alternativeText
+        }
+      }
+      ... on ComponentBlocksServices {
+        pretitle
+        title
+        description
+        servicesTag: tag
+        subservices {
+          title
+          description
+          url
+          icon
+        }
+      }
+      ... on ComponentBlocksCounters {
+        counters {
+          value
+          description
+        }
+      }
+      ... on ComponentBlocksProgresses {
+        pretitle
+        title
+        description
+        items {
+          label
+          percentage
+        }
+      }
+      ... on ComponentBlocksParagraph {
+        text
+      }
+      ... on ComponentBlocksImage {
+        image {
+          url
+          width
+          height
+          alternativeText
+        }
+        size
+      }
+      ... on ComponentBlocksHeroGallery {
+        pretitle
+        title
+        description
+        galleryItems: items {
+          image {
+            url
+            width
+            height
+            alternativeText
+          }
+          url
+          title
+          tag
+        }
+      }
+      ... on ComponentBlocksGallery {
+        images(pagination: { pageSize: 50 }) {
+          url
+          width
+          height
+          alternativeText
+        }
+      }
+      ... on ComponentBlocksBigGallery {
+        bigGalleryItems: items(pagination: { pageSize: 50 }) {
+          url
+          width
+          height
+          alternativeText
+        }
+      }
+      ... on ComponentBlocksFaqs {
+        faqs: items {
+          question
+          answer
+        }
+      }
+      ... on ComponentBlocksSinglePictureDetail {
+        pretitle
+        title
+        description
+        callToActionLabel
+        callToActionUrl
+        picture {
+          url
+          width
+          height
+          alternativeText
+        }
+      }
+      ... on ComponentBlocksDoublePictureDetail {
+        pretitle
+        title
+        description
+        subservices: items {
+          title
+          description
+          icon
+        }
+        picture1 {
+          url
+          width
+          height
+          alternativeText
+        }
+        picture2 {
+          url
+          width
+          height
+          alternativeText
+        }
+      }
+      ... on ComponentBlocksHeroSlider {
+        slides {
+          picture {
+            url
+            width
+            height
+            alternativeText
+          }
+          url
+        }
+      }
+      ... on ComponentBlocksTestimonials {
+        testimonials: items {
+          name
+          role
+          description
+          avatar {
+            url
+            width
+            height
+            alternativeText
+          }
+        }
+      }
+    }
+    postcontent {
+      __typename
+      ... on ComponentBlocksHero {
+        pretitle
+        title
+        description
+        tag
+      }
+      ... on ComponentBlocksHeroVideo {
+        title
+        url
+        background {
+          url
+          width
+          height
+          alternativeText
+        }
+      }
+      ... on ComponentBlocksCallToAction {
+        title
+        url
+        callToAction
+        callToActionBackground: background {
+          url
+          width
+          height
+          alternativeText
+        }
+      }
+      ... on ComponentBlocksServices {
+        pretitle
+        title
+        description
+        servicesTag: tag
+        subservices {
+          title
+          description
+          url
+          icon
+        }
+      }
+      ... on ComponentBlocksCounters {
+        counters {
+          value
+          description
+        }
+      }
+      ... on ComponentBlocksProgresses {
+        pretitle
+        title
+        description
+        items {
+          label
+          percentage
+        }
+      }
+      ... on ComponentBlocksParagraph {
+        text
+      }
+      ... on ComponentBlocksImage {
+        image {
+          url
+          width
+          height
+          alternativeText
+        }
+        size
+      }
+      ... on ComponentBlocksHeroGallery {
+        pretitle
+        title
+        description
+        galleryItems: items {
+          image {
+            url
+            width
+            height
+            alternativeText
+          }
+          url
+          title
+          tag
+        }
+      }
+      ... on ComponentBlocksGallery {
+        images(pagination: { pageSize: 50 }) {
+          url
+          width
+          height
+          alternativeText
+        }
+      }
+      ... on ComponentBlocksBigGallery {
+        bigGalleryItems: items(pagination: { pageSize: 50 }) {
+          url
+          width
+          height
+          alternativeText
+        }
+      }
+      ... on ComponentBlocksFaqs {
+        faqs: items {
+          question
+          answer
+        }
+      }
+      ... on ComponentBlocksSinglePictureDetail {
+        pretitle
+        title
+        description
+        callToActionLabel
+        callToActionUrl
+        picture {
+          url
+          width
+          height
+          alternativeText
+        }
+      }
+      ... on ComponentBlocksDoublePictureDetail {
+        pretitle
+        title
+        description
+        subservices: items {
+          title
+          description
+          icon
+        }
+        picture1 {
+          url
+          width
+          height
+          alternativeText
+        }
+        picture2 {
+          url
+          width
+          height
+          alternativeText
+        }
+      }
+      ... on ComponentBlocksHeroSlider {
+        slides {
+          picture {
+            url
+            width
+            height
+            alternativeText
+          }
+          url
+        }
+      }
+      ... on ComponentBlocksTestimonials {
+        testimonials: items {
+          name
+          role
+          description
+          avatar {
+            url
+            width
+            height
+            alternativeText
+          }
+        }
+      }
+    }
+  }
+}

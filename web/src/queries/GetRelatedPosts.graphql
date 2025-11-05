@@ -1,0 +1,27 @@
+query GetRelatedPost($locale: I18NLocaleCode!, $lteDate: Date!) {
+  posts(
+    locale: $locale
+    pagination: { page: 1, pageSize: 3 }
+    sort: ["date:desc", "publishedAt:desc"]
+    filters: { date: { lte: $lteDate } }
+  ) {
+    title
+    slug
+    publishedAt
+    date
+    author {
+      name
+      photo {
+        url
+        width
+        height
+        alternativeText
+      }
+    }
+    cover {
+      url
+      alternativeText
+      caption
+    }
+  }
+}

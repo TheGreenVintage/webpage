@@ -1,0 +1,190 @@
+.distributed-container {
+  display: flex;
+  flex-direction: column;
+  gap: 125px;
+  padding: 120px 0px;
+
+  &.small {
+    gap: 50px;
+  }
+
+  &.compact {
+    padding: 30px 0px;
+  }
+
+  @media #{$md,$xs} {
+    gap: 50px;
+    padding: 50px 0px;
+  }
+}
+
+.bd-markdown {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 2em 0 1em 0;
+  }
+
+  & h1:first-child,
+  & h2:first-child,
+  & h3:first-child,
+  & h4:first-child,
+  & h5:first-child,
+  & h6:first-child {
+    margin-top: 0;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2em;
+    margin: 1.2em 0 1em 0;
+  }
+
+  ul,
+  ol {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+
+  li {
+    padding: 4px 0px;
+    line-height: 2em;
+  }
+
+  a {
+    color: var(--clr-theme-1);
+    font-weight: 600;
+  }
+}
+
+h5.bd-service-sidebar-category-title {
+  color: var(--clr-theme-1);
+}
+
+.nhighlight {
+  opacity: 0.00001;
+  height: 1px;
+}
+
+.bd-brand-item {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bd-brand-single {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.bd-brand-single img {
+  -webkit-filter: none !important;
+  -ms-filter: none !important;
+  -moz-filter: none !important;
+}
+
+.gallery-zoom {
+  position: relative;
+  overflow: hidden;
+  &-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    span {
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      background: var(--clr-common-white);
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      color: var(--clr-body-heading);
+      transform: scale(0);
+      visibility: hidden;
+      @include transition(0.3s);
+      @media #{$xxs} {
+        height: 60px;
+        width: 60px;
+      }
+      i {
+        display: block;
+        color: var(--clr-theme-1);
+        font-size: 24px;
+        line-height: 1;
+        margin-top: 30px;
+        @media #{$xxs} {
+          margin-top: 37px;
+        }
+      }
+    }
+  }
+  &:hover {
+    img {
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+    span {
+      transform: scale(1);
+      visibility: visible;
+    }
+  }
+  img {
+    width: 100%;
+  }
+}
+
+/*----------------------------------------*/
+/* Call to action */
+/*----------------------------------------*/
+.bd-call-to-action-title {
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--clr-common-white);
+  @media #{$lg} {
+    font-size: 50px;
+  }
+  @media #{$md} {
+    font-size: 46px;
+  }
+  @media #{$xs} {
+    font-size: 36px;
+  }
+  @media #{$xxxs} {
+    font-size: 30px;
+  }
+}
+.bd-call-to-action-area {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  &:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: rgba(22, 22, 22, 0.75);
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+  }
+}
+
+.bd-portfolio-title {
+  text-shadow:
+    0 0 2px #66666666,
+    0 0 4px #99999966;
+}
+
+// Trick to know valid proxy images
+img[srcset*="proxy"] {
+  border: 5px solid green;
+  border-style: inset;
+}

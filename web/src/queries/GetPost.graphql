@@ -1,0 +1,102 @@
+query GetPost(
+  $status: PublicationStatus!
+  $locale: I18NLocaleCode!
+  $slug: String!
+  $lteDate: Date!
+) {
+  posts(
+    status: $status
+    locale: $locale
+    filters: { slug: { eq: $slug }, date: { lte: $lteDate } }
+  ) {
+    title
+    slug
+    meta_title
+    meta_description
+    author {
+      name
+      photo {
+        url
+        width
+        height
+        alternativeText
+      }
+    }
+    cover {
+      url
+      width
+      height
+      alternativeText
+    }
+    publishedAt
+    date
+    content {
+      __typename
+      ... on ComponentContentText {
+        id
+        text
+      }
+      ... on ComponentContentImage {
+        id
+        picture {
+          url
+          width
+          height
+          alternativeText
+        }
+        alt
+      }
+      ... on ComponentContentGallery {
+        id
+        media {
+          url
+          width
+          height
+          alternativeText
+        }
+      }
+      ... on ComponentContentQuote {
+        quote: text
+        author
+      }
+      ... on ComponentContentChecklist {
+        title
+        items {
+          text
+        }
+      }
+      ... on ComponentContentFaqs {
+        items {
+          question
+          answer
+        }
+      }
+    }
+  }
+  recent: posts(
+    locale: $locale
+    pagination: { page: 1, pageSize: 3 }
+    sort: ["date:desc", "publishedAt:desc"]
+    filters: { date: { lte: $lteDate } }
+  ) {
+    title
+    slug
+    publishedAt
+    date
+    author {
+      name
+      photo {
+        url
+        width
+        height
+        alternativeText
+      }
+    }
+    cover {
+      url
+      width
+      height
+      alternativeText
+    }
+  }
+}

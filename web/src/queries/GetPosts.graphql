@@ -1,0 +1,39 @@
+query GetPosts(
+  $locale: I18NLocaleCode!
+  $page: Int!
+  $pageSize: Int!
+  $lteDate: Date!
+) {
+  posts_connection(
+    locale: $locale
+    pagination: { page: $page, pageSize: $pageSize }
+    sort: ["date:desc", "publishedAt:desc"]
+    filters: { date: { lte: $lteDate } }
+  ) {
+    nodes {
+      title
+      slug
+      author {
+        name
+        photo {
+          url
+          width
+          height
+          alternativeText
+        }
+      }
+      cover {
+        url
+        width
+      }
+      publishedAt
+      date
+    }
+    pageInfo {
+      page
+      pageSize
+      pageCount
+      total
+    }
+  }
+}

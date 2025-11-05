@@ -1,0 +1,54 @@
+# WEBPAGE URLS
+
+/ca
+/es
+/en
+
+# New
+/ca/projectes
+/ca/projectes/[slug]
+/es/proyectos
+/es/proyectos/[slug]
+/en/projects
+/en/projects/[slug]
+
+/ca/equip
+/es/equipo
+/en/team
+
+# New
+/ca/serveis
+/es/servicios
+/en/services
+
+/ca/team-building
+/ca/team-building/[slug]
+/es/team-building
+/es/team-building/[slug]
+/en/team-building
+
+# New
+/ca/viatges-de-receptiu
+/es/viatjes-de-receptivo
+/en/receptive-trips
+
+# New
+/ca/festes-corporatives
+/es/fiestas-corporativas
+/en/corporative-parties
+
+/ca/esdeveniments
+/ca/esdeveniments/[slug]
+/es/eventos
+/es/eventos/[slug]
+/en/events
+/en/events/[slug]
+
+# New
+/ca/blog
+/es/blog
+/en/blog
+
+/ca/contacte
+/es/contacto
+/en/contact

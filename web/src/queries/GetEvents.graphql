@@ -1,0 +1,11 @@
+query GetEvents($locale: I18NLocaleCode!) {
+  events(locale: $locale) {
+    title
+    description
+    slug
+    cover {
+      name
+      url
+    }
+  }
+}
