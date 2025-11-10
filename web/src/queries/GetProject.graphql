@@ -1,5 +1,9 @@
 query GetProject($locale: I18NLocaleCode!, $slug: String!) {
-  projects(locale: $locale, filters: { slug: { eq: $slug } }) {
+  projects(
+    locale: $locale
+    filters: { slug: { eq: $slug } }
+    status: PUBLISHED
+  ) {
     title
     meta_title
     meta_description

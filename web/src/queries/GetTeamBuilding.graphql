@@ -1,5 +1,9 @@
 query GetTeamBuilding($locale: I18NLocaleCode!, $slug: String!) {
-  teamBuildings(locale: $locale, filters: { slug: { eq: $slug } }) {
+  teamBuildings(
+    locale: $locale
+    filters: { slug: { eq: $slug } }
+    status: PUBLISHED
+  ) {
     title
     meta_title
     meta_description
@@ -65,6 +69,7 @@ query GetTeamBuilding($locale: I18NLocaleCode!, $slug: String!) {
   others: teamBuildings(
     locale: $locale
     pagination: { page: 1, pageSize: 15 }
+    status: PUBLISHED
   ) {
     title
     slug

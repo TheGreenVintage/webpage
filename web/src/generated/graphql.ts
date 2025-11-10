@@ -4358,6 +4358,7 @@ export const GetPostDocument = gql`
     }
   }
   recent: posts(
+    status: PUBLISHED
     locale: $locale
     pagination: {page: 1, pageSize: 3}
     sort: ["date:desc", "publishedAt:desc"]
@@ -4388,6 +4389,7 @@ export const GetPostDocument = gql`
 export const GetPostsDocument = gql`
     query GetPosts($locale: I18NLocaleCode!, $page: Int!, $pageSize: Int!, $lteDate: Date!) {
   posts_connection(
+    status: PUBLISHED
     locale: $locale
     pagination: {page: $page, pageSize: $pageSize}
     sort: ["date:desc", "publishedAt:desc"]
@@ -4423,7 +4425,7 @@ export const GetPostsDocument = gql`
     `;
 export const GetProjectDocument = gql`
     query GetProject($locale: I18NLocaleCode!, $slug: String!) {
-  projects(locale: $locale, filters: {slug: {eq: $slug}}) {
+  projects(locale: $locale, filters: {slug: {eq: $slug}}, status: PUBLISHED) {
     title
     meta_title
     meta_description
@@ -4486,6 +4488,7 @@ export const GetProjectsDocument = gql`
     locale: $locale
     pagination: {page: 1, pageSize: 15}
     sort: ["priority:desc", "publishedAt:desc"]
+    status: PUBLISHED
   ) {
     title
     slug
@@ -4987,6 +4990,7 @@ export const GetReceptiveTripsDocument = gql`
 export const GetRelatedPostDocument = gql`
     query GetRelatedPost($locale: I18NLocaleCode!, $lteDate: Date!) {
   posts(
+    status: PUBLISHED
     locale: $locale
     pagination: {page: 1, pageSize: 3}
     sort: ["date:desc", "publishedAt:desc"]
@@ -5365,7 +5369,7 @@ export const GetSustainabilityDocument = gql`
     `;
 export const GetTeamBuildingDocument = gql`
     query GetTeamBuilding($locale: I18NLocaleCode!, $slug: String!) {
-  teamBuildings(locale: $locale, filters: {slug: {eq: $slug}}) {
+  teamBuildings(locale: $locale, filters: {slug: {eq: $slug}}, status: PUBLISHED) {
     title
     meta_title
     meta_description
@@ -5426,7 +5430,11 @@ export const GetTeamBuildingDocument = gql`
       }
     }
   }
-  others: teamBuildings(locale: $locale, pagination: {page: 1, pageSize: 15}) {
+  others: teamBuildings(
+    locale: $locale
+    pagination: {page: 1, pageSize: 15}
+    status: PUBLISHED
+  ) {
     title
     slug
     cover {
@@ -5444,6 +5452,7 @@ export const GetTeamBuildingsDocument = gql`
     locale: $locale
     pagination: {page: 1, pageSize: 30}
     sort: ["priority:desc", "publishedAt:desc"]
+    status: PUBLISHED
   ) {
     title
     duration

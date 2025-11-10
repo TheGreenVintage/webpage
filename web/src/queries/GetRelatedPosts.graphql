@@ -1,5 +1,6 @@
 query GetRelatedPost($locale: I18NLocaleCode!, $lteDate: Date!) {
   posts(
+    status: PUBLISHED
     locale: $locale
     pagination: { page: 1, pageSize: 3 }
     sort: ["date:desc", "publishedAt:desc"]

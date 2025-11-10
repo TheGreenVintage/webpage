@@ -3,6 +3,7 @@ query GetTeamBuildings($locale: I18NLocaleCode!) {
     locale: $locale
     pagination: { page: 1, pageSize: 30 }
     sort: ["priority:desc", "publishedAt:desc"]
+    status: PUBLISHED
   ) {
     title
     duration

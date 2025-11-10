@@ -3,6 +3,7 @@ query GetProjects($locale: I18NLocaleCode!) {
     locale: $locale
     pagination: { page: 1, pageSize: 15 }
     sort: ["priority:desc", "publishedAt:desc"]
+    status: PUBLISHED
   ) {
     title
     slug

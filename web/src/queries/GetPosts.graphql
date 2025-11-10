@@ -5,6 +5,7 @@ query GetPosts(
   $lteDate: Date!
 ) {
   posts_connection(
+    status: PUBLISHED
     locale: $locale
     pagination: { page: $page, pageSize: $pageSize }
     sort: ["date:desc", "publishedAt:desc"]
