@@ -107,15 +107,15 @@ const translations = {
       telephone2: "(+34) 644 282 929",
       email: "info@thegreenvintage.com",
       address:
-        "Carrer de la Indústria, 312, ESC H 2-D Badalona, Barcelona 08912",
+        "Carrer de la Indústria, 228, 08912 Badalona, Barcelona",
       postalAddress: {
-        streetAddress: "Carrer de la Indústria, 312, ESC H 2-D",
+        streetAddress: "Carrer de la Indústria, 228",
         addressLocality: "Badalona",
         addressRegion: "Barcelona",
         postalCode: "08912",
         addressCountry: "ES",
       },
-      maps: "https://www.google.com/maps/place/C%2F+de+la+Ind%C3%BAstria,+312,+ESC+H+2-D,+08912+Badalona,+Barcelona",
+      maps: "https://www.google.com/maps/place/Carrer+de+la+Ind%C3%BAstria,+228,+08912+Badalona,+Barcelona",
       request_budget: "Request a quote",
     },
     privacy: {
@@ -241,15 +241,15 @@ const translations = {
       telephone2: "(+34) 644 282 929",
       email: "info@thegreenvintage.com",
       address:
-        "Carrer de la Indústria, 312, ESC H 2-D Badalona, Barcelona 08912",
+        "Carrer de la Indústria, 228, 08912 Badalona, Barcelona",
       postalAddress: {
-        streetAddress: "Carrer de la Indústria, 312, ESC H 2-D",
+        streetAddress: "Carrer de la Indústria, 228",
         addressLocality: "Badalona",
         addressRegion: "Barcelona",
         postalCode: "08912",
         addressCountry: "ES",
       },
-      maps: "https://www.google.com/maps/place/C%2F+de+la+Ind%C3%BAstria,+312,+ESC+H+2-D,+08912+Badalona,+Barcelona",
+      maps: "https://www.google.com/maps/place/Carrer+de+la+Ind%C3%BAstria,+228,+08912+Badalona,+Barcelona",
       request_budget: "Pedir presupuesto",
     },
     privacy: {
@@ -375,15 +375,15 @@ const translations = {
       telephone2: "(+34) 644 282 929",
       email: "info@thegreenvintage.com",
       address:
-        "Carrer de la Indústria, 312, ESC H 2-D Badalona, Barcelona 08912",
+        "Carrer de la Indústria, 228, 08912 Badalona, Barcelona",
       postalAddress: {
-        streetAddress: "Carrer de la Indústria, 312, ESC H 2-D",
+        streetAddress: "Carrer de la Indústria, 228",
         addressLocality: "Badalona",
         addressRegion: "Barcelona",
         postalCode: "08912",
         addressCountry: "ES",
       },
-      maps: "https://www.google.com/maps/place/C%2F+de+la+Ind%C3%BAstria,+312,+ESC+H+2-D,+08912+Badalona,+Barcelona",
+      maps: "https://www.google.com/maps/place/Carrer+de+la+Ind%C3%BAstria,+228,+08912+Badalona,+Barcelona",
       request_budget: "Demanar pressupost",
     },
     privacy: {
