@@ -1,7 +1,7 @@
 import { cacheTag } from "@/lib/apollo";
 import { revalidateTag, revalidatePath } from "next/cache";
 
-const secret = "invalidate-thegreenvintage-plz";
+const secret = process.env.INVALIDATE_TOKEN;
 
 const allBlogPages = (slug: string) => {
   return [
@@ -94,6 +94,14 @@ export async function POST(request: Request) {
   console.log("New invalidation request...");
 
   const token = request.headers.get("x-thegreenvintage-token");
+
+  if (!secret) {
+    console.error("Missing INVALIDATE_TOKEN configuration");
+
+    return new Response("Invalidate token not configured", {
+      status: 500,
+    });
+  }
 
   if (token !== secret) {
     console.log("Invalid token");
