@@ -80,6 +80,22 @@ export default function Footer({ locale }: Props) {
                       <i className="fab fa-linkedin-in"></i>
                     </a>
                   </div>
+                  <div style={{ paddingTop: 20 }}>
+                    <div
+                      className="trustlocal-widget"
+                      data-id="476559"
+                      data-language-code="es"
+                      data-country-code="ES"
+                      data-badge="hidden"
+                      data-quote="default"
+                      data-size="small"
+                      data-type="landscape"
+                      data-border="shadow"
+                      data-theme="light"
+                      data-background="default"
+                      data-google="default"
+                    ></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -134,22 +150,6 @@ export default function Footer({ locale }: Props) {
                     width={90}
                     height={120}
                   />
-                </div>
-                <div style={{ paddingTop: 20 }}>
-                  <div
-                    className="trustlocal-widget"
-                    data-id="476559"
-                    data-language-code="es"
-                    data-country-code="ES"
-                    data-badge="hidden"
-                    data-quote="default"
-                    data-size="small"
-                    data-type="landscape"
-                    data-border="shadow"
-                    data-theme="light"
-                    data-background="default"
-                    data-google="default"
-                  ></div>
                 </div>
               </div>
             </div>
