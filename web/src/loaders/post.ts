@@ -17,7 +17,7 @@ export const loader = async (
   slug: string,
   preview: boolean = false,
 ) => {
-  const lteDate = new Date();
+  const lteDate = preview ? new Date("9999-12-31") : new Date();
 
   const { error, data } = await getClient().query<GetPostQuery>({
     query: GetPostDocument,
