@@ -14,9 +14,17 @@ export default function Footer({ locale }: Props) {
 
   return (
     <footer className="gray-bg">
+      <link
+        href="https://assets.calendly.com/assets/external/widget.css"
+        rel="stylesheet"
+      />
       <Script
         src="https://static.trustlocal.es/widget/widget_v2.js"
         strategy="afterInteractive"
+      />
+      <Script
+        src="https://assets.calendly.com/assets/external/widget.js"
+        strategy="lazyOnload"
       />
       <div className="bd-footer-area pt-100 pb-60">
         <div className="container">
@@ -223,6 +231,19 @@ export default function Footer({ locale }: Props) {
                       {t("us.address")}
                     </a>
                   </div>
+                  <Script id="calendly-badge-widget" strategy="lazyOnload">
+                    {`window.addEventListener('load', function () {
+  if (!window.Calendly) return;
+
+  window.Calendly.initBadgeWidget({
+    url: 'https://calendly.com/thegreenvintage-info/30min',
+    text: 'Reserva una llamada',
+    color: '#66ac82',
+    textColor: '#ffffff',
+    branding: true
+  });
+});`}
+                  </Script>
                 </div>
               </div>
             </div>
