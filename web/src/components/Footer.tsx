@@ -3,6 +3,7 @@ import Image from "next/image";
 import Script from "next/script";
 import { Locale, tl } from "@/lib/locale";
 import { nl } from "@/lib/navigation";
+import CalendlyPopupLink from "@/components/CalendlyPopupLink";
 
 type Props = {
   locale: Locale;
@@ -230,6 +231,9 @@ export default function Footer({ locale }: Props) {
                     <a href={t("us.maps")} target="_blank">
                       {t("us.address")}
                     </a>
+                    <CalendlyPopupLink
+                      label={t("footer.schedule_meeting")}
+                    />
                   </div>
                   <Script id="calendly-badge-widget" strategy="lazyOnload">
                     {`window.addEventListener('load', function () {

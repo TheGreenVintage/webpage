@@ -137,6 +137,7 @@ const translations = {
       services: "Services",
       company: "Company",
       all_rights: "All Rights Reserved",
+      schedule_meeting: "Schedule a meeting",
     },
     not_found: {
       title: "Page not found!",
@@ -271,6 +272,7 @@ const translations = {
       services: "Servicios",
       company: "Empresa",
       all_rights: "Todos los derechos reservados",
+      schedule_meeting: "Agenda una reunión",
     },
     not_found: {
       title: "Página no encontrada!",
@@ -405,6 +407,7 @@ const translations = {
       services: "Serveis",
       company: "Empresa",
       all_rights: "Tots els drets reservats",
+      schedule_meeting: "Agenda una reunió",
     },
     not_found: {
       title: "Pàgina no trobada!",
