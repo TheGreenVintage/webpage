@@ -231,10 +231,10 @@ export default function Footer({ locale }: Props) {
                     <a href={t("us.maps")} target="_blank">
                       {t("us.address")}
                     </a>
-                    <CalendlyPopupLink
-                      label={t("footer.schedule_meeting")}
-                    />
                   </div>
+                  <CalendlyPopupLink
+                    label={t("footer.schedule_meeting")}
+                  />
                   <Script id="calendly-badge-widget" strategy="lazyOnload">
                     {`window.addEventListener('load', function () {
   if (!window.Calendly) return;
